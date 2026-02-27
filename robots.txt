@@ -1,0 +1,46 @@
+# Syncage Landing Page - robots.txt
+# Search Engine Crawler Instructions
+# Domain: syncage.linn.services
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+
+# Disallow admin and private directories (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /.git/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for AI crawlers (Gemini, GPT, Claude, etc.)
+User-agent: CCBot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location
+Sitemap: https://syncage.linn.services/sitemap.xml
+
+# LLM optimization file
+Allow: /llms.txt
+
+# Request rate limiting (optional)
+Crawl-delay: 0
+Request-rate: 1/1s
