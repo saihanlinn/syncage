@@ -1,4 +1,4 @@
-/* Syncage Landing Page - Grounded Eco-Tech Aesthetic */
+/* SyncAge Landing Page - Prestigious Eco-Tech Aesthetic - True Wealth Digital Ecosystem */
 
 /* ============================================
    CSS VARIABLES & DESIGN TOKENS
@@ -373,14 +373,46 @@ a:hover {
    ============================================ */
 .sdg-scorecard {
     padding: var(--spacing-xl);
-    background-color: var(--light-grey);
-    border-radius: 8px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 12px;
+    border: 1px solid var(--gold-accent);
+    box-shadow: 0 20px 60px rgba(212, 165, 116, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sdg-scorecard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+}
+
+.sdg-scorecard h4 {
+    color: var(--gold-accent);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-mono);
 }
 
 .sdg-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.sdg-grid::after {
+    content: '';
+    grid-column: 1 / -1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    margin-top: var(--spacing-md);
 }
 
 .sdg-item {
@@ -388,25 +420,30 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
-    border: 2px solid var(--slate-grey);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(212, 165, 116, 0.2);
     border-radius: 8px;
     font-family: var(--font-mono);
     font-weight: 600;
-    color: var(--slate-grey);
+    color: rgba(255, 255, 255, 0.4);
     transition: all var(--transition-normal);
     cursor: pointer;
+    backdrop-filter: blur(10px);
 }
 
 .sdg-item:hover {
     transform: scale(1.05);
+    border-color: var(--gold-accent);
+    color: var(--gold-accent);
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(212, 165, 116, 0.05));
 }
 
 .sdg-item.active {
-    background-color: var(--forest-green);
-    color: var(--white);
-    border-color: var(--forest-green);
-    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.2);
+    background: linear-gradient(135deg, var(--gold-accent), rgba(212, 165, 116, 0.8));
+    color: #1a1a1a;
+    border-color: var(--gold-accent);
+    box-shadow: 0 8px 32px rgba(212, 165, 116, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-weight: 700;
 }
 
 .api-flow {
@@ -414,8 +451,10 @@ a:hover {
     align-items: center;
     justify-content: space-around;
     padding: var(--spacing-xl);
-    background-color: var(--light-grey);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.05), rgba(212, 165, 116, 0.05));
+    border-radius: 12px;
+    border: 1px solid var(--gold-accent);
+    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.08);
 }
 
 .flow-step {
@@ -431,12 +470,14 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--forest-green);
+    background: linear-gradient(135deg, var(--forest-green), rgba(45, 80, 22, 0.8));
     color: var(--white);
     border-radius: 50%;
     font-family: var(--font-mono);
     font-weight: 700;
     font-size: 1.5rem;
+    border: 2px solid var(--gold-accent);
+    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.3);
 }
 
 .flow-arrow {
@@ -453,8 +494,10 @@ a:hover {
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xl);
-    background-color: var(--light-grey);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.05), rgba(212, 165, 116, 0.05));
+    border-radius: 12px;
+    border: 1px solid var(--gold-accent);
+    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.08);
 }
 
 .hub-center {
@@ -463,7 +506,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--forest-green);
+    background: linear-gradient(135deg, var(--forest-green), rgba(45, 80, 22, 0.8));
     color: var(--white);
     border-radius: 50%;
     font-family: var(--font-sans);
@@ -471,7 +514,8 @@ a:hover {
     text-align: center;
     padding: var(--spacing-sm);
     z-index: 10;
-    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.2);
+    box-shadow: 0 12px 40px rgba(45, 80, 22, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--gold-accent);
 }
 
 .hub-connection {
@@ -481,7 +525,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
     border: 2px solid var(--gold-accent);
     border-radius: 8px;
     font-family: var(--font-sans);
@@ -490,12 +534,14 @@ a:hover {
     text-align: center;
     padding: var(--spacing-sm);
     transition: all var(--transition-normal);
+    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.1);
 }
 
 .hub-connection:hover {
-    background-color: var(--gold-accent);
+    background: linear-gradient(135deg, var(--gold-accent), rgba(212, 165, 116, 0.9));
     color: var(--white);
     transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(212, 165, 116, 0.3);
 }
 
 .hub-connection.logistics {
@@ -600,9 +646,167 @@ a:hover {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--forest-green), var(--gold-accent));
+    background: linear-gradient(90deg, var(--forest-green), var(--gold-accent), var(--forest-green));
     border-radius: 4px;
     transition: width var(--transition-slow);
+    box-shadow: 0 0 16px rgba(212, 165, 116, 0.4);
+}
+
+/* ============================================
+   TRUE WEALTH SHOWCASE SECTION
+   ============================================ */
+.true-wealth-showcase {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.03), rgba(212, 165, 116, 0.03));
+}
+
+.showcase-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--slate-grey);
+    margin-bottom: var(--spacing-xl);
+}
+
+.wealth-card-demo {
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-xl) 0;
+}
+
+.wealth-card {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 1px solid var(--gold-accent);
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    box-shadow: 0 30px 80px rgba(212, 165, 116, 0.2), 
+                0 0 60px rgba(212, 165, 116, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.wealth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+}
+
+.wealth-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.card-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--gold-accent);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-status {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #4ade80;
+    text-transform: uppercase;
+    background: rgba(74, 222, 128, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.card-body {
+    margin-bottom: var(--spacing-lg);
+}
+
+.wealth-name {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.wealth-link {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--gold-accent);
+    margin-bottom: var(--spacing-lg);
+    word-break: break-all;
+}
+
+.metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.metric {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(212, 165, 116, 0.05));
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.metric-value {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    margin-bottom: var(--spacing-xs);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+}
+
+.card-footer {
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.privacy-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.privacy-toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--gold-accent);
+}
+
+.privacy-toggle label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    user-select: none;
 }
 
 /* ============================================
@@ -620,21 +824,25 @@ a:hover {
 }
 
 .feature-card {
-    background-color: var(--light-grey);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
     padding: var(--spacing-xl);
-    border-radius: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 165, 116, 0.2);
     transition: all var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.05);
 }
 
 .feature-card:hover {
-    background-color: var(--white);
-    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.1);
+    background: var(--white);
+    box-shadow: 0 12px 32px rgba(45, 80, 22, 0.12);
     transform: translateY(-4px);
+    border-color: var(--gold-accent);
 }
 
 .feature-card h3 {
     color: var(--forest-green);
     margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
 }
 
 .feature-card ul {
