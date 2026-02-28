@@ -660,6 +660,38 @@ a:hover {
     background: linear-gradient(135deg, rgba(45, 80, 22, 0.03), rgba(212, 165, 116, 0.03));
 }
 
+.wealth-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    margin: var(--spacing-xl) 0;
+}
+
+.wealth-mockup-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wealth-mockup-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(45, 80, 22, 0.15);
+}
+
+.wealth-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .wealth-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .showcase-intro {
     text-align: center;
     font-size: 1.1rem;
@@ -675,7 +707,7 @@ a:hover {
 
 .wealth-card {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border: 1px solid var(--gold-accent);
     border-radius: 16px;
@@ -807,6 +839,127 @@ a:hover {
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     user-select: none;
+}
+
+/* ============================================
+   API RESELLER ENGINE SECTION
+   ============================================ */
+.api-reseller-section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.05), rgba(45, 80, 22, 0.05));
+}
+
+.reseller-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--slate-grey);
+    margin-bottom: var(--spacing-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reseller-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.05), rgba(212, 165, 116, 0.05));
+    border-radius: 12px;
+    border: 1px solid var(--gold-accent);
+    margin: var(--spacing-xl) 0;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.reseller-flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+.flow-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.reseller-flow-step h3 {
+    font-size: 1rem;
+    color: var(--forest-green);
+    margin-bottom: var(--spacing-xs);
+}
+
+.reseller-flow-step p {
+    font-size: 0.85rem;
+    color: var(--slate-grey);
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: var(--gold-accent);
+    flex: 0 0 auto;
+}
+
+.res.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}  margin-top: var(--spacing-xl);
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.05);
+    transition: all var(--transition-normal);
+}
+
+.benefit-card:hover {
+    box-shadow: 0 12px 32px rgba(45, 80, 22, 0.12);
+    transform: translateY(-4px);
+    border-color: var(--gold-accent);
+}
+
+.benefit-card h3 {
+    color: var(--forest-green);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.benefit-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-card li {
+    padding: var(--spacing-sm) 0;
+    color: var(--slate-grey);
+    border-bottom: 1px solid rgba(45, 80, 22, 0.1);
+    font-size: 0.95rem;
+}
+
+.benefit-card li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .reseller-flow {
+        flex-direction: column;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .reseller-benefits {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================
