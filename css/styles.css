@@ -661,35 +661,16 @@ a:hover {
 }
 
 .wealth-showcase-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
-    align-items: center;
-    margin: var(--spacing-xl) 0;
-}
-
-.wealth-mockup-image {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.wealth-mockup-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(45, 80, 22, 0.15);
+    margin: var(--spacing-xl) 0;
 }
 
 .wealth-card-container {
     display: flex;
     justify-content: center;
-}
-
-@media (max-width: 768px) {
-    .wealth-showcase-grid {
-        grid-template-columns: 1fr;
-    }
+    width: 100%;
 }
 
 .showcase-intro {
@@ -707,7 +688,7 @@ a:hover {
 
 .wealth-card {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border: 1px solid var(--gold-accent);
     border-radius: 16px;
