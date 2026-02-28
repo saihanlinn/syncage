@@ -39,7 +39,7 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
-            "email": "hello@syncage.linn.services"
+            "email": "syncage@linn.services"
         }
     }
     </script>
@@ -65,6 +65,14 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <!-- PROJECT STATUS BANNER -->
+    <div class="status-banner">
+        <div class="banner-content">
+            <span class="banner-badge">PROJECT STATUS</span>
+            <span class="banner-text">Phase 2 (Designing). Currently onboarding Founding Partners & Strategic Investors for 2026 Launch.</span>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-container">
@@ -90,12 +98,27 @@
                 SyncAge is where social enterprises, NGOs, and conscious consumers connect through verified impact metrics.
             </p>
             <div class="hero-ctas">
-                <a href="#buyer" class="cta-button primary">Build My True Wealth</a>
-                <a href="#seller" class="cta-button secondary">Join as Seller</a>
-                <a href="#platform" class="cta-button secondary">API Access</a>
+                <button class="cta-button primary" onclick="document.getElementById('get-involved').scrollIntoView({behavior: 'smooth'})">Join the Founding Circle</button>
+                <button class="cta-button secondary" onclick="document.getElementById('get-involved').scrollIntoView({behavior: 'smooth'})">Register Interest</button>
             </div>
         </div>
     </header>
+
+    <!-- Founder's Statement -->
+    <section class="founder-statement">
+        <div class="container">
+            <h2>A Message from the Founder: Vision in Motion</h2>
+            <article class="statement-content">
+                <p>
+                    SyncAge is currently a "Whitepaper in Motion." We are building the global infrastructure for True Wealth. 
+                    We have the methodology, the Impact network, and the "gritty" field experience. Now, we are assembling the architects.
+                </p>
+                <p class="statement-highlight">
+                    We are currently seeking Founding Partners, Board Advisors, and Seed Funding.
+                </p>
+            </article>
+        </div>
+    </section>
 
     <!-- Core Identity Section -->
     <section class="identity" id="mission">
@@ -313,6 +336,7 @@
             <div class="wealth-showcase-grid">
                 <div class="wealth-card-container">
                 <div class="wealth-card">
+                    <div class="design-concept-tag">Design Concept</div>
                     <div class="card-header">
                         <span class="card-label">TRUE WEALTH PROFILE</span>
                         <span class="card-status">PUBLIC</span>
@@ -360,6 +384,7 @@
             </p>
             
             <div class="reseller-flow">
+                <p class="design-concept-label"><em>Design Concept</em></p>
                 <div class="reseller-flow-step">
                     <div class="flow-icon">📦</div>
                     <h3>Supplier</h3>
@@ -401,7 +426,7 @@
                         <li>Shop anywhere, build True Wealth everywhere</li>
                         <li>Unified impact dashboard across platforms</li>
                         <li>Verified metrics on every purchase</li>
-                        <li>Portable impact profile (syncage.io/u/yourname)</li>
+                        <li>Portable impact profile (syncage.linn.services/u/yourname)</li>
                     </ul>
                 </article>
                 <article class="benefit-card">
@@ -414,6 +439,51 @@
                     </ul>
                 </article>
             </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved" id="get-involved">
+        <div class="container">
+            <h2>Join the Founding Circle</h2>
+            <p class="section-intro">SyncAge is assembling the architects of the True Wealth economy. Whether you're a Founding Partner, Strategic Investor, Board Advisor, or Impact Advocate, we want to hear from you.</p>
+            
+            <form class="founding-form" action="mailto:syncage@linn.services" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="organization">Organization / Company</label>
+                    <input type="text" id="organization" name="organization" placeholder="Your organization">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest">I'm interested in *</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="founding-partner">Founding Partner</option>
+                        <option value="strategic-investor">Strategic Investor</option>
+                        <option value="board-advisor">Board Advisor</option>
+                        <option value="impact-advocate">Impact Advocate</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell us about your vision *</label>
+                    <textarea id="message" name="message" required placeholder="Share your thoughts, ideas, or how you'd like to contribute..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Register Interest</button>
+                <p class="form-note">All inquiries are sent to syncage@linn.services and treated confidentially.</p>
+            </form>
         </div>
     </section>
 
