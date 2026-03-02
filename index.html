@@ -448,7 +448,11 @@
             <h2>Join the Founding Circle</h2>
             <p class="section-intro">SyncAge is assembling the architects of the True Wealth economy. Whether you're a Founding Partner, Strategic Investor, Board Advisor, or Impact Advocate, we want to hear from you.</p>
             
-            <form class="founding-form" action="mailto:syncage@linn.services" method="POST" enctype="text/plain">
+            <form class="founding-form" id="foundingForm">
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! Your interest has been registered. We'll be in touch at syncage@linn.services within 48 hours.
+                </div>
+                
                 <div class="form-group">
                     <label for="name">Full Name *</label>
                     <input type="text" id="name" name="name" required placeholder="Your name">
@@ -481,7 +485,7 @@
                     <textarea id="message" name="message" required placeholder="Share your thoughts, ideas, or how you'd like to contribute..."></textarea>
                 </div>
                 
-                <button type="submit" class="submit-button">Register Interest</button>
+                <button type="submit" class="submit-button" id="submitBtn">Register Interest</button>
                 <p class="form-note">All inquiries are sent to syncage@linn.services and treated confidentially.</p>
             </form>
         </div>
@@ -604,6 +608,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js" defer></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/form-handler.js"></script>
 </body>
 </html>

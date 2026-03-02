@@ -789,14 +789,16 @@ a:hover {
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    background: rgba(212, 165, 116, 0.2);
-    color: var(--gold-accent);
-    padding: 4px 10px;
+    background: rgba(212, 165, 116, 0.9);
+    color: var(--forest-green);
+    padding: 6px 12px;
     border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
-    border: 1px solid var(--gold-accent);), 
+    border: none;
+    z-index: 10;
+    letter-spacing: 0.5px;), 
                 0 0 60px rgba(212, 165, 116, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
@@ -830,6 +832,7 @@ a:hover {
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-md);
     border-bottom: 1px solid rgba(212, 165, 116, 0.3);
+    margin-top: var(--spacing-lg);
 }
 
 .card-label {
@@ -959,6 +962,26 @@ a:hover {
     box-shadow: 0 4px 12px rgba(45, 80, 22, 0.05);
 }
 
+.founding-form.success {
+    background: rgba(45, 80, 22, 0.05);
+    border-color: var(--forest-green);
+}
+
+.success-message {
+    display: none;
+    padding: var(--spacing-lg);
+    background: rgba(45, 80, 22, 0.1);
+    border-left: 4px solid var(--forest-green);
+    border-radius: 4px;
+    color: var(--forest-green);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-message.show {
+    display: block;
+}
+
 .form-group {
     margin-bottom: var(--spacing-lg);
     display: flex;
@@ -988,8 +1011,9 @@ a:hover {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--gold-accent);
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+    border-color: var(--forest-green);
+    box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+    background: rgba(45, 80, 22, 0.02);
 }
 
 .form-group textarea {
@@ -1015,6 +1039,11 @@ a:hover {
 .submit-button:hover {
     background: rgba(45, 80, 22, 0.9);
     box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .form-note {
